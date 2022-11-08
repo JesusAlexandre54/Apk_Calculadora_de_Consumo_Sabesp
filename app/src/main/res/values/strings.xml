@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Calculadora de consumo</string>
+    <string name="button">Button</string>
+    <string name="name">Name</string>
+    <string name="name2">Name2</string>
+    <string name="ultimo">Ultimo</string>
+    <string name="atual">Atual</string>
+    <string name="consumo_m3">CONSUMO M3</string>
+    <string name="calcular">CALCULAR</string>
+    <string name="total_r">TOTAL R$</string>
+    <string name="registro_atual">Registro Atual</string>
+    <string name="ultimo_registro">Ultimo Registro</string>
+    <string name="registro_atual2">Registro Atual</string>
+    <string name="ultimo_registro2">Ultimo Registro</string>
+    <string name="sair">sair</string>
+</resources>
