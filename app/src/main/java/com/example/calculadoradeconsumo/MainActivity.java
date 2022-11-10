@@ -2,6 +2,7 @@ package com.example.calculadoradeconsumo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,8 +26,6 @@ public class MainActivity extends AppCompatActivity {
         atual = findViewById(R.id.atual);
         ultimo = findViewById(R.id.ultimo);
         calcular = findViewById(R.id.button);
-        consumoTotal = findViewById(R.id.txt_consumo);
-        total = findViewById(R.id.txt_total);
         sair = findViewById(R.id.bt_sair);
 
         sair.setOnClickListener(new View.OnClickListener() {
@@ -62,14 +61,13 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }else {
-                    consumoTotal.setText(String.valueOf(consumo));
-                    total.setText(String.valueOf(totalGeral));
-                }
-
-
-
-
-
+                    /*MainActivy.this == > active atual , Resultado.class ==> active a qual sera direcionada após
+                    acionar o click do button, i.putExtra leva os dados para a active chamada, name:"resultado" é
+                    o nome da variável e "value: são os valores carregados na variavel resultado"*/
+                    Intent i = new Intent(MainActivity.this, Resultado.class);
+                i.putExtra("resultado","Valor Total: R$ "+ String.valueOf(totalGeral));
+                i.putExtra("consumo","Consumo Total: "+ String.valueOf(consumo)+"m3");
+                    startActivity(i); }
 
             }
         });
