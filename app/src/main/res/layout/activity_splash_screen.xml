@@ -12,6 +12,6 @@ tools:context=".SplashScreen">
     android:layout_height="match_parent"
     android:gravity="center"
     android:textSize="30sp"
-    android:text="Estamos preparando o seu pedido..."/>
+    android:text="Calculando..."/>
 
 </LinearLayout>

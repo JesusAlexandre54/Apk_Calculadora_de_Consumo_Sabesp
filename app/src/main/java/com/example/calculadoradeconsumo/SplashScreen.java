@@ -8,7 +8,7 @@ import android.os.Handler;
 
 public class SplashScreen extends AppCompatActivity {
     Intent i;
-    String resultado;
+    String resultado,consumo;
 
 
     @Override
@@ -17,6 +17,7 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
         i = getIntent();
         resultado = i.getExtras().getString("resultado");
+        consumo = i.getExtras().getString("consumo");
 
 
 
@@ -25,6 +26,7 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
                 i = new Intent(SplashScreen.this,Resultado.class);
                 i.putExtra("resultado",resultado);
+                i.putExtra("consumo",consumo);
                 startActivity(i);
 
             }
